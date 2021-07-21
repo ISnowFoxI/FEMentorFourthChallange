@@ -1,0 +1,213 @@
+//? Front-end Style Guide
+
+//? Layout
+/*
+     The designs were created to the following widths:
+     // - Mobile: 375px
+     // - Desktop: 1440px
+*/
+//? Colors
+
+//? Primary
+
+$strong-cyan: hsl(172, 67%, 45%);
+
+//? Neutral
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$white: hsl(0, 0%, 100%);
+$mid-dark-cyan: hsl(186, 14%, 43%);
+$input-cyan: hsl(185, 41%, 97%);
+$warning: hsl(12, 31%, 56%);
+//? Typography
+
+//? Body Copy
+
+$font-size-for-inputs: 2.4rem;
+$font-size-normal: 1.6rem;
+
+//? Font
+
+// - Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+// - Weights: 400, 500, 700
+
+*,
+*::before,
+*::after {
+    font-family: "Space Mono", monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 10px;
+    min-height: 100vh;
+    body {
+        min-height: inherit;
+
+        background-color: $light-grayish-cyan;
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: inherit;
+            justify-content: flex-end;
+                @media screen and (min-width:600px) {
+                    
+                    justify-content: space-between;
+                    
+                }
+            
+            section {
+                h1 { 
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 1rem;
+                    color: $very-dark-cyan;
+                    font-size: 2.4rem;
+                    font-weight: bold;
+                    margin: 10rem;
+                    
+                    
+                }
+                form //main tag
+                {
+                    font-size: $font-size-normal;
+                    border-radius: 2rem;
+                    background-color: white;
+
+                    .labels {
+                        font-size: 1.8rem;
+                        color: $dark-grayish-cyan;
+                        font-weight: 700;
+                    }
+                    input {
+                        font-weight: bold;
+                        color: $very-dark-cyan;
+                        border: none;
+                        background-color: $input-cyan;
+                        display: block;
+                        direction: rtl;
+                        font-size: $font-size-for-inputs;
+                        border-radius: 0.5rem;
+                        appearance: text;
+                        -moz-appearance: textfield;
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            display: none;
+                        }
+                    }
+
+                    input:focus-visible {
+                        outline: 0.25rem solid $strong-cyan;
+                    }
+
+                 
+
+
+                    .maincolDiv {
+                        .billContainer {
+                            position: relative;
+                            input {
+                                position: relative;
+                            }
+                        }
+
+                        input[type="radio"] {
+                            display: none;
+                        }
+
+                        .tipButtons {
+                            .tipSecondContainer {
+                                .col {
+                                    input[type="radio"]:checked + .tips {
+                                        background-color: $strong-cyan;
+                                        color: $very-dark-cyan;
+
+                                   
+                                    }
+                                    .tips {
+                                        background-color: $very-dark-cyan;
+                                        color: white;
+                                        font-size: $font-size-for-inputs;
+                                        border-radius: 0.5rem;
+                                        font-weight: bold;
+                                        text-align: center;
+
+                                        &:hover {
+                                            background-color: $strong-cyan;
+                                            color: $very-dark-cyan;
+                                        }
+                                    }
+                                    .customInputTip {
+                                        color: $mid-dark-cyan;
+                                        background-color: $input-cyan;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .results {
+                        background-color: $very-dark-cyan;
+                        border-radius: 1.5rem;
+
+                        .indResutContainer {
+                            .resultLabels {
+                                color: white;
+                                line-height: 1.8rem;
+                                sub {
+                                    color: $dark-grayish-cyan;
+                                }
+                            }
+
+                            input {
+                                background-color: transparent;
+                                color: $strong-cyan;
+
+                                @media screen and (min-width:992px) {
+                                    &{
+                                        font-size: 3.6rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .resetBtn {
+                            text-transform: uppercase;
+                            font-size: $font-size-for-inputs;
+                            font-weight: bold;
+                            background-color: $strong-cyan;
+                            border-radius: 0.5rem;
+
+                            &:hover {
+                                background-color: $light-grayish-cyan;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .attribution {
+            padding: 1rem;
+            font-size: 1.8rem;
+            position: relative;
+            color: $mid-dark-cyan;
+
+            margin: 0 auto;
+            text-align: center;
+                
+        
+            a {
+                text-decoration: none;
+            color: $very-dark-cyan;
+
+            
+            &:hover {
+                color: $strong-cyan;
+            }
+            }
+        }
+        }
+    }

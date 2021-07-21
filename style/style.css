@@ -1,0 +1,182 @@
+/*
+     The designs were created to the following widths:
+     // - Mobile: 375px
+     // - Desktop: 1440px
+*/
+*,
+*::before,
+*::after {
+  font-family: "Space Mono", monospace;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  min-height: 100vh;
+}
+
+html body {
+  min-height: inherit;
+  background-color: #c5e4e7;
+}
+
+html body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: inherit;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (min-width: 600px) {
+  html body main {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+html body main section h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: #00494d;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 10rem;
+}
+
+html body main section form {
+  font-size: 1.6rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+html body main section form .labels {
+  font-size: 1.8rem;
+  color: #7f9c9f;
+  font-weight: 700;
+}
+
+html body main section form input {
+  font-weight: bold;
+  color: #00494d;
+  border: none;
+  background-color: #f4fafa;
+  display: block;
+  direction: rtl;
+  font-size: 2.4rem;
+  border-radius: 0.5rem;
+  -webkit-appearance: text;
+          appearance: text;
+  -moz-appearance: textfield;
+}
+
+html body main section form input::-webkit-outer-spin-button, html body main section form input::-webkit-inner-spin-button {
+  display: none;
+}
+
+html body main section form input:focus-visible {
+  outline: 0.25rem solid #26c0ab;
+}
+
+html body main section form .maincolDiv .billContainer {
+  position: relative;
+}
+
+html body main section form .maincolDiv .billContainer input {
+  position: relative;
+}
+
+html body main section form .maincolDiv input[type="radio"] {
+  display: none;
+}
+
+html body main section form .maincolDiv .tipButtons .tipSecondContainer .col input[type="radio"]:checked + .tips {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .tips {
+  background-color: #00494d;
+  color: white;
+  font-size: 2.4rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .tips:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .customInputTip {
+  color: #5e7a7d;
+  background-color: #f4fafa;
+}
+
+html body main section form .results {
+  background-color: #00494d;
+  border-radius: 1.5rem;
+}
+
+html body main section form .results .indResutContainer .resultLabels {
+  color: white;
+  line-height: 1.8rem;
+}
+
+html body main section form .results .indResutContainer .resultLabels sub {
+  color: #7f9c9f;
+}
+
+html body main section form .results .indResutContainer input {
+  background-color: transparent;
+  color: #26c0ab;
+}
+
+@media screen and (min-width: 992px) {
+  html body main section form .results .indResutContainer input {
+    font-size: 3.6rem;
+  }
+}
+
+html body main section form .results .resetBtn {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: #26c0ab;
+  border-radius: 0.5rem;
+}
+
+html body main section form .results .resetBtn:hover {
+  background-color: #c5e4e7;
+}
+
+html body .attribution {
+  padding: 1rem;
+  font-size: 1.8rem;
+  position: relative;
+  color: #5e7a7d;
+  margin: 0 auto;
+  text-align: center;
+}
+
+html body .attribution a {
+  text-decoration: none;
+  color: #00494d;
+}
+
+html body .attribution a:hover {
+  color: #26c0ab;
+}
+/*# sourceMappingURL=style.css.map */
