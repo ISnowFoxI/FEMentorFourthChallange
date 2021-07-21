@@ -10,6 +10,8 @@ const totalPerPerson = document.getElementById("totalPerPerson")
 
 const sectionContainer = document.getElementById("sectionContainer")
 
+const customTip = document.getElementById("customTip")
+
 const reset = document.getElementById("reset")
 
 //variables
@@ -72,6 +74,13 @@ else {
 
 tips.forEach(tip => {
     tip.addEventListener("input", tipValue=> getTipValue(tipValue))
+    customTip.addEventListener("click", ()=> { 
+        if(tip.checked) { 
+            tip.checked=false;
+            
+        }
+        return;
+    })
 });
 
 numberOfPeople.addEventListener("input",people=> getNumberOfPeople(people))
