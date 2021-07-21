@@ -59,6 +59,8 @@ html {
                 }
             
             section {
+                max-width: 100rem;
+                margin: 0 auto;
                 h1 { 
                     text-align: center;
                     text-transform: uppercase;

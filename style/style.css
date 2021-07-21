@@ -45,6 +45,11 @@ html body main {
   }
 }
 
+html body main section {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 html body main section h1 {
   text-align: center;
   text-transform: uppercase;
