@@ -76,12 +76,14 @@ const calculate = () => {
 
 tips.forEach(tip => {
     tip.addEventListener("input", tipValue => getTipValue(tipValue))
-    customTip.addEventListener("click", () => {
+    customTip.addEventListener("click", customTipValue => {
         if (tip.checked) {
             tip.checked = false;
 
         }
-        return;
+        getTipValue(customTipValue)
+        calculate()
+       
     })
 });
 
