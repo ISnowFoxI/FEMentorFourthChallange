@@ -45,15 +45,17 @@ const calculate = ()=> {
 
 
     if((!billAmountVar && billAmountVar!=0) || !numberOfPeopleVar) { 
+        totalTipPerPerson.style.fontSize="1.5rem"
+        totalPerPerson.style.fontSize="1.5rem"
         if(!billAmountVar) { 
-            totalTipPerPerson.value = "Enter bill"
-            totalPerPerson.value = "Enter bill"
+          
+            totalTipPerPerson.value = "No bill"
+            totalPerPerson.value = "No bill"
         }
         else { 
-            totalTipPerPerson.value = "Error people"
-            totalPerPerson.value = "Error people"
-            totalTipPerPerson.style.fontSize="1.6rem"
-            totalPerPerson.style.fontSize="1.6rem"
+            totalTipPerPerson.value = "no people"
+            totalPerPerson.value = "No people"
+           
         }
 
 }
