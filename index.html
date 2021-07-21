@@ -1,200 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusif Oruclu - Web Developer</title>
-    <link rel="stylesheet" href="./CssStyles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>SnowFox and Frontend Mentor | Tip calculator app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
+
+
+
 </head>
-<body>      
-    <div class="socialsAsideFloat"></div>
-    <header class="headerMain">
-        <a href="#" class="devoloperName ">Yusif Oruclu<span class="dot">.</span></a>
-            <nav class="navbar ">
-                <ul class="navbarList ">
-                    <li class="navbarListElements "><a href="#welcomeTextContainer">Top</a></li>
-                    <li class="navbarListElements "><a href="#myWork">My Work</a></li>
-                    <li class="navbarListElements "><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>  
-            <div class="hamburgerMenu "><span class="hamburgerLine"></span></div>
-            <a href="mailto:sfdev22@gmail.com" class="mailLink">sfdev22@gmail.com</a>
 
-    </header>
+<body class="">
+  <main class="container-sm   main h-100">
 
-    <main class="mainContainer" > 
-        <div class="welcomeTextContainer" id="welcomeTextContainer">  
-            <h1 class="welcomeText" >Hi there, I am <span class="aboutMe" data-words='["a Student.", "a Web developer.", "an Artist.", "a 3d hobbyist.", "Yusif."]'  data-wait='1000'></span></h1>
-          
+    <section id="sectionContainer" class="align-bottom">
+      <h1>Spli<br/>tter</h1>
+      <form action="" class="row row-cols-lg-2 p-5 p-lg-5">
+        <div class="maincolDiv col-lg-6 p-lg-5 ">
+          <div class="billContainer  row row-cols-2m-0 p-1">
+            <label class="labels m-0 p-1 mb-3 col-12" for="bill">Bill</label>
+            <div class="inputAndDollarSignContainer m-0 p-0">
+              <input class="p-2 m-0 col-12 " type="number"  id="bill" name="bill"  placeholder="0" min="0" step="0.1">
+              <img class="icons dollarIcon" src="./images/icon-dollar.svg" alt="">
+            </div>
+          </div>
+          <p class="labels mb-3 mt-5">Select Tip %</p>
+
+          <div class="tipButtons">
+            <div class="tipSecondContainer row row-cols-2 row-cols-lg-3 g-4 g-lg-3">   
+              <div class="col">
+                <input class="tipInputPercentage" name="tips" type="radio" id="five" value="5" checked>
+                <label class="labels p-2 tips container-fluid" for="five">5%
+                </label>
+              </div>
+
+              <div class="col">
+                <input class="tipInputPercentage" name="tips" type="radio" id="ten" value="10">
+                <label class="labels p-2   tips container-fluid" for="ten">10%
+                </label>
+              </div>
+             
+              <div class="col">
+                <input class="tipInputPercentage" name="tips" type="radio" id="fifteen" value="15">
+                <label class="labels p-2  tips container-fluid" for="fifteen">15%
+                </label>
+              </div>
+             
+              <div class="col">
+                <input class="tipInputPercentage" name="tips" type="radio" id="twentyfive" value="25">
+                <label class="labels p-2  tips container-fluid" for="twentyfive">25%
+                </label>
+              </div>
+             
+              <div class="col">
+                <input class="tipInputPercentage" name="tips" type="radio" id="fifty" value="50">
+                <label class="labels p-2  tips container-fluid" for="fifty">50%
+                </label>
+              </div>
+             
+              <div class="col">
+                <input class="tipInputPercentage customInputTip labels p-2  tips container-fluid" class="customInputTip p-2 labels tips container-fluid" name="tips" type="number" id="customTip" placeholder="Custom">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="peopleIconAndNumberOfPeopleContainer m-0 p-0">
+            <label for="numOfPeople" class="labels mb-3 mt-5">Number of People</label>
+            <input class="p-2 col-12" type="number" id="numOfPeople" placeholder="1" min="1">
+            <img  class="icons dollarIcon" src="./images/icon-person.svg" alt="">
+          </div>
         </div>
-    
-    <section id="myWork" class="myWork">
-  
-        <div class="articleContainer">
 
-            <article class="projectContainer">
-                <div class="projectInternalContainer">
-                    <a href="https://sffemtipchallange.netlify.app/" target="_blank" class="projectLink">
-                        <img src="./Images/tipCalculator.png" alt="" class="projectImage" />
-                        <div class="projectImageOverlay">
-                            <h2 class="projectHeading">Tip Calculator</h2>
-                           <p> Click for Live View</p>
-    
-                        </div>
-                    </a>
-                    
-                </div>
-            </article>
+        <div class="results p-4  row row-cols-1 justify-content-center m-0 col-lg-6 mt-5 mt-lg-0 p-lg-5">
 
-            <article class="projectContainer">
-                <div class="projectInternalContainer">
-                    <a href="https://sffemcardcomponent.netlify.app/" target="_blank" class="projectLink">
-                        <img src="./Images/SimpleCard.png" alt="" class="projectImage" />
-                        <div class="projectImageOverlay">
-                            <h2 class="projectHeading">Simple Card</h2>
-                           <p> Click for Live View</p>
-    
-                        </div>
-                    </a>
-                    
-                </div>
-            </article>
+          <div class="indResutContainer p-2 mb-5 justify-content-between align-items-center col-12 row row-cols-2 mt-4">
 
-            <article class="projectContainer">
-                <div class="projectInternalContainer">
-                    <a href="https://sf3columncardcomponent.netlify.app/" target="_blank" class="projectLink">
-                        <img src="./Images/3ColumnCard.png" alt="" class="projectImage" />
-                        <div class="projectImageOverlay">
-                            <h2 class="projectHeading">3 Column Card </h2>
-                           <p> Click for Live View</p>
-    
-                        </div>
-                    </a>
-                </div>
-            </article>
+            <label class="labels resultLabels col-sm-7 " for="tipAmount">
+              Tip Amount<br />
+              <sub>/ person</sub>
+            </label>
+            <input id="totalTip" class="col-sm-4" type="text " id="tipAmount" value="$0.00" min="0" disabled>
+          </div>
 
-            <article class="projectContainer">
-                <div class="projectInternalContainer">
-                    <a href="https://sffaqaccordioncard.netlify.app/" target="_blank" class="projectLink">
-                        <img src="./Images/FaqPage.png" alt="" class="projectImage" />
-                        <div class="projectImageOverlay">
-                            <h2 class="projectHeading">Faq Page </h2>
-                           <p> Click for Live View</p>
-    
-                        </div>
-                    </a>
-                </div>
-            </article>
+          <div class="indResutContainer p-2 mb-0  justify-content-between align-items-center col-12 row row-cols-2 ">
 
-      
+            <label class="labels resultLabels col-sm-7 " for="total">
+              Total<br />
+              <sub>/ person</sub>
+            </label>
+            <input id="totalPerPerson" class="col-sm-4" type="text" id="total" value="$0.00" min="0" disabled>
+          </div>
 
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://thisinteriordevio.netlify.app/" target="_blank" class="projectLink">
-                    <img src="./Images/thisInterior.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">Simple Page</h2>
-                       <p> Click for Live View</p>
-
-                    </div>
-                </a>
-                
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://codepen.io/ISnowFoxI/full/wvMWxjr" target="_blank" class="projectLink"><img src="./Images/snakeGame.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">Snake Game</h2>
-                        <p>Click for Live View</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://codepen.io/ISnowFoxI/full/abdNRaQ" target="_blank" class="projectLink"><img src="./Images/choreBot.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">ChoreBot</h2>
-                        <p>Click for Live View</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://inputprct.netlify.app/" target="_blank" class="projectLink"><img src="./Images/dynamicInput.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">Dynamic Input</h2>
-                        <p>Click for Live View</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://reqemtap.netlify.app/" target="_blank" class="projectLink"><img src="./Images/numberGuess.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">Number Guesser</h2>
-                        <p>Click for Live View</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://drive.google.com/file/d/1ytGKh4wZpHd68kE-4WEE5eIr5KwXgYId/view" target="_blank" class="projectLink"><img src="./Images/imageRec.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">Image recognition (alpha)</h2>
-                        <p>Click to download</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
-        <article class="projectContainer">
-            <div class="projectInternalContainer">
-                <a href="https://404errordevc.netlify.app/" target="_blank" class="projectLink"><img src="./Images/404errorPage.png" alt="" class="projectImage" />
-                    <div class="projectImageOverlay">
-                        <h2 class="projectHeading">404 page</h2>
-                        <p>Click for Live View</p>
-                    </div>
-                </a>
-            </div>
-        </article>
-        
-    </div>
-
-    
-    </section> 
-
-    <section id="contact" class="contact">
-        <h1 class="contanctTitle">Contact me</h1>
-        <div class="contactInformationContainer">
-           
-                <div class="footer-social-links">
-                    <a href="https://github.com/ISnowFoxI" title="github" target="_blank"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/yusif-oruclu-808ab1213/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/IMark22I" title="Dribbble" target="_blank"><i class="fa fa-facebook"></i></a>
-               
-            </div>
+          <button type="reset" id="reset" class="resetBtn align-self-end btn mt-5 p-2 w-100">Reset</button>
         </div>
+
+      </form>
     </section>
-    
-    </main> 
-    
-    <footer class="footer"> 
-        <small>&copy; 2021</small>
-    </footer>
-   
-    <script  src="./script.js"></script>
-    
-    
+  </main>
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/ISnowFoxI">SnowFox</a>.
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
