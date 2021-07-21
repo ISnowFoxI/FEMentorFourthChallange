@@ -76,6 +76,13 @@ html {
                     border-radius: 2rem;
                     background-color: white;
 
+
+                    .icons { 
+                        width: 1.5rem;
+                        position: absolute;
+                        bottom: 1.5rem;
+                        left: 2rem;
+                    }
                     .labels {
                         font-size: 1.8rem;
                         color: $dark-grayish-cyan;
@@ -84,7 +91,7 @@ html {
                     input {
                         font-weight: bold;
                         color: $very-dark-cyan;
-                        border: none;
+                        border: 0.25rem solid $input-cyan;
                         background-color: $input-cyan;
                         display: block;
                         direction: rtl;
@@ -99,18 +106,26 @@ html {
                     }
 
                     input:focus-visible {
-                        outline: 0.25rem solid $strong-cyan;
-                    }
+                        outline: none;
+                        border: 0.25rem solid $strong-cyan;
+                        }
 
+                        
                  
 
 
                     .maincolDiv {
                         .billContainer {
                             position: relative;
-                            input {
+
+                            .inputAndDollarSignContainer { 
                                 position: relative;
+                                input {
+                                    position: relative;
+                                }
+                                
                             }
+
                         }
 
                         input[type="radio"] {
@@ -123,7 +138,7 @@ html {
                                     input[type="radio"]:checked + .tips {
                                         background-color: $strong-cyan;
                                         color: $very-dark-cyan;
-
+                                        
                                    
                                     }
                                     .tips {
@@ -142,9 +157,15 @@ html {
                                     .customInputTip {
                                         color: $mid-dark-cyan;
                                         background-color: $input-cyan;
+                                        &:hover { 
+                                            background-color: $input-cyan;
+                                        }
                                     }
                                 }
                             }
+                        }
+                        .peopleIconAndNumberOfPeopleContainer{ 
+                            position: relative;
                         }
                     }
 
@@ -164,6 +185,7 @@ html {
                             input {
                                 background-color: transparent;
                                 color: $strong-cyan;
+                                border: none;
 
                                 @media screen and (min-width:992px) {
                                     &{

@@ -26,9 +26,12 @@
       <h1>Spli<br/>tter</h1>
       <form action="" class="row row-cols-lg-2 p-5 p-lg-5">
         <div class="maincolDiv col-lg-6 p-lg-5 ">
-          <div class="billContainer row row-cols-2">
-            <label class="labels mb-3 col-12" for="bill">Bill</label>
-            <input class="p-2 col-12" type="number"  id="bill" name="bill"  placeholder="0" min="0" step="0.1">
+          <div class="billContainer  row row-cols-2m-0 p-1">
+            <label class="labels m-0 p-1 mb-3 col-12" for="bill">Bill</label>
+            <div class="inputAndDollarSignContainer m-0 p-0">
+              <input class="p-2 m-0 col-12 " type="number"  id="bill" name="bill"  placeholder="0" min="0" step="0.1">
+              <img class="icons dollarIcon" src="./images/icon-dollar.svg" alt="">
+            </div>
           </div>
           <p class="labels mb-3 mt-5">Select Tip %</p>
 
@@ -71,9 +74,11 @@
             </div>
           </div>
 
-          <label for="numOfPeople" class="labels mb-3 mt-5">Number of People</label>
-          <input class="p-2 col-12" type="number" id="numOfPeople" placeholder="1" min="1" required
-            data-tip="Can't be zero">
+          <div class="peopleIconAndNumberOfPeopleContainer m-0 p-0">
+            <label for="numOfPeople" class="labels mb-3 mt-5">Number of People</label>
+            <input class="p-2 col-12" type="number" id="numOfPeople" placeholder="1" min="1">
+            <img  class="icons dollarIcon" src="./images/icon-person.svg" alt="">
+          </div>
         </div>
 
         <div class="results p-4  row row-cols-1 justify-content-center m-0 col-lg-6 mt-5 mt-lg-0 p-lg-5">

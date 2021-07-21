@@ -61,6 +61,13 @@ html body main section form {
   background-color: white;
 }
 
+html body main section form .icons {
+  width: 1.5rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+}
+
 html body main section form .labels {
   font-size: 1.8rem;
   color: #7f9c9f;
@@ -70,7 +77,7 @@ html body main section form .labels {
 html body main section form input {
   font-weight: bold;
   color: #00494d;
-  border: none;
+  border: 0.25rem solid #f4fafa;
   background-color: #f4fafa;
   display: block;
   direction: rtl;
@@ -86,14 +93,19 @@ html body main section form input::-webkit-outer-spin-button, html body main sec
 }
 
 html body main section form input:focus-visible {
-  outline: 0.25rem solid #26c0ab;
+  outline: none;
+  border: 0.25rem solid #26c0ab;
 }
 
 html body main section form .maincolDiv .billContainer {
   position: relative;
 }
 
-html body main section form .maincolDiv .billContainer input {
+html body main section form .maincolDiv .billContainer .inputAndDollarSignContainer {
+  position: relative;
+}
+
+html body main section form .maincolDiv .billContainer .inputAndDollarSignContainer input {
   position: relative;
 }
 
@@ -125,6 +137,14 @@ html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .cu
   background-color: #f4fafa;
 }
 
+html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .customInputTip:hover {
+  background-color: #f4fafa;
+}
+
+html body main section form .maincolDiv .peopleIconAndNumberOfPeopleContainer {
+  position: relative;
+}
+
 html body main section form .results {
   background-color: #00494d;
   border-radius: 1.5rem;
@@ -142,6 +162,7 @@ html body main section form .results .indResutContainer .resultLabels sub {
 html body main section form .results .indResutContainer input {
   background-color: transparent;
   color: #26c0ab;
+  border: none;
 }
 
 @media screen and (min-width: 992px) {
