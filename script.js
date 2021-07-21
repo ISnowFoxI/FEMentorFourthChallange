@@ -2,7 +2,7 @@ const billAmount = document.getElementById("bill")
 
 const numberOfPeople = document.getElementById("numOfPeople")
 
-const tipPerc= document.getElementsByClassName("tipInputPercentage")
+const tipPerc = document.getElementsByClassName("tipInputPercentage")
 
 const totalTipPerPerson = document.getElementById("totalTip")
 
@@ -15,57 +15,59 @@ const customTip = document.getElementById("customTip")
 const reset = document.getElementById("reset")
 
 //variables
-let billAmountVar=0;
-let tipPercVar=5;
-let tipValue=0;
-let numberOfPeopleVar=1;
-let totalTipPerPersonVar=0;
-let totalPerPersonVar=0;
+let billAmountVar = 0;
+let tipPercVar = 5;
+let tipValue = 0;
+let numberOfPeopleVar = 1;
+let totalTipPerPersonVar = 0;
+let totalPerPersonVar = 0;
 
-const tips=[].slice.call(tipPerc)
+const tips = [].slice.call(tipPerc)
 
-const getTipValue = (tipValue) => { 
-    tipPercVar=parseFloat(tipValue.target.value);
-
-}
-
-const getNumberOfPeople = (people)=> { 
-    numberOfPeopleVar=parseFloat(people.target.value);
-}
-
-
-const getBillAmount = (bill)=> { 
-    billAmountVar =parseFloat(bill.target.value);
+const getTipValue = (tipValue) => {
+    tipPercVar = parseFloat(tipValue.target.value);
 
 }
 
-const calculate = ()=> { 
-
-    tipValue = (billAmountVar*tipPercVar)/100;
-    totalTipPerPersonVar=tipValue/numberOfPeopleVar
-    totalPerPersonVar = (billAmountVar+tipValue)/numberOfPeopleVar;
+const getNumberOfPeople = (people) => {
+    numberOfPeopleVar = parseFloat(people.target.value);
+}
 
 
-    if((!billAmountVar && billAmountVar!=0) || !numberOfPeopleVar) { 
-        totalTipPerPerson.style.fontSize="1.5rem"
-        totalPerPerson.style.fontSize="1.5rem"
-        if(!billAmountVar) { 
-          
-            totalTipPerPerson.value = "No bill"
-            totalPerPerson.value = "No bill"
+const getBillAmount = (bill) => {
+    billAmountVar = parseFloat(bill.target.value);
+
+}
+
+const calculate = () => {
+    if (!tipPercVar) {
+        tipPercVar = 0;
+    }
+    tipValue = (billAmountVar * tipPercVar) / 100;
+    totalTipPerPersonVar = tipValue / numberOfPeopleVar
+    totalPerPersonVar = (billAmountVar + tipValue) / numberOfPeopleVar;
+
+
+    if ((!billAmountVar && billAmountVar != 0) || !numberOfPeopleVar) {
+   
+        if (!billAmountVar) {
+
+            totalTipPerPerson.value = "Error"
+            totalPerPerson.value = "Error"
         }
-        else { 
-            totalTipPerPerson.value = "No people"
-            totalPerPerson.value = "No people"
-           
+        else {
+            totalTipPerPerson.value = "Error"
+            totalPerPerson.value = "Error"
+
         }
 
-}
-else { 
+    }
+    else {
+        
 
-    totalTipPerPerson.value=`$${(totalTipPerPersonVar.toFixed(2))}` ;
-    totalPerPerson.value=`$${(totalPerPersonVar.toFixed(2))}` ;
-}
+        totalTipPerPerson.value = `$${(totalTipPerPersonVar.toFixed(2))}`;
+        totalPerPerson.value = `$${(totalPerPersonVar.toFixed(2))}`;
+    }
 
 
 
@@ -73,29 +75,29 @@ else {
 }
 
 tips.forEach(tip => {
-    tip.addEventListener("input", tipValue=> getTipValue(tipValue))
-    customTip.addEventListener("click", ()=> { 
-        if(tip.checked) { 
-            tip.checked=false;
-            
+    tip.addEventListener("input", tipValue => getTipValue(tipValue))
+    customTip.addEventListener("click", () => {
+        if (tip.checked) {
+            tip.checked = false;
+
         }
         return;
     })
 });
 
-numberOfPeople.addEventListener("input",people=> getNumberOfPeople(people))
-   
-billAmount.addEventListener("input", bill =>getBillAmount(bill))
+numberOfPeople.addEventListener("input", people => getNumberOfPeople(people))
+
+billAmount.addEventListener("input", bill => getBillAmount(bill))
 
 
 
 sectionContainer.addEventListener("input", calculate)
 
-reset.addEventListener("click", e=> { 
-    let billAmountVar=0;
-let tipPercVar=5;
-let tipValue=0;
-let numberOfPeopleVar=1;
-let totalTipPerPersonVar=0;
-let totalPerPersonVar=0;
+reset.addEventListener("click", e => {
+    let billAmountVar = 0;
+    let tipPercVar = 5;
+    let tipValue = 0;
+    let numberOfPeopleVar = 1;
+    let totalTipPerPersonVar = 0;
+    let totalPerPersonVar = 0;
 })
