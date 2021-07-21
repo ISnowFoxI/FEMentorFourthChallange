@@ -41,11 +41,30 @@ const calculate = ()=> {
 
     tipValue = (billAmountVar*tipPercVar)/100;
     totalTipPerPersonVar=tipValue/numberOfPeopleVar
-    totalTipPerPerson.value=`$${(totalTipPerPersonVar.toFixed(2))}` ;
-
     totalPerPersonVar = (billAmountVar+tipValue)/numberOfPeopleVar;
-    console.log(totalPerPersonVar)
+
+
+    if((!billAmountVar && billAmountVar!=0) || !numberOfPeopleVar) { 
+        if(!billAmountVar) { 
+            totalTipPerPerson.value = "Enter bill"
+            totalPerPerson.value = "Enter bill"
+        }
+        else { 
+            totalTipPerPerson.value = "Error people"
+            totalPerPerson.value = "Error people"
+            totalTipPerPerson.style.fontSize="1.6rem"
+            totalPerPerson.style.fontSize="1.6rem"
+        }
+
+}
+else { 
+
+    totalTipPerPerson.value=`$${(totalTipPerPersonVar.toFixed(2))}` ;
     totalPerPerson.value=`$${(totalPerPersonVar.toFixed(2))}` ;
+}
+
+
+
 
 }
 
