@@ -30,12 +30,25 @@ const getTipValue = (tipValue) => {
 }
 
 const getNumberOfPeople = (people) => {
-    numberOfPeopleVar = parseFloat(people.target.value);
+    if (!people.target.value) { 
+        numberOfPeopleVar=1;
+    }
+    else { 
+        numberOfPeopleVar = parseFloat(people.target.value);
+
+    }
 }
 
 
 const getBillAmount = (bill) => {
-    billAmountVar = parseFloat(bill.target.value);
+    if(!bill.target.value)
+    { 
+    billAmountVar=0;
+    }
+    else { 
+        billAmountVar = parseFloat(bill.target.value);
+
+    }
 
 }
 
@@ -48,26 +61,11 @@ const calculate = () => {
     totalPerPersonVar = (billAmountVar + tipValue) / numberOfPeopleVar;
 
 
-    if ((!billAmountVar && billAmountVar != 0) || !numberOfPeopleVar) {
-   
-        if (!billAmountVar) {
-
-            totalTipPerPerson.value = "Error"
-            totalPerPerson.value = "Error"
-        }
-        else {
-            totalTipPerPerson.value = "Error"
-            totalPerPerson.value = "Error"
-
-        }
-
-    }
-    else {
-        
+    
 
         totalTipPerPerson.value = `$${(totalTipPerPersonVar.toFixed(2))}`;
         totalPerPerson.value = `$${(totalPerPersonVar.toFixed(2))}`;
-    }
+  
 
 
 
