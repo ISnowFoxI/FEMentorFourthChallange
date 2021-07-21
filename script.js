@@ -53,7 +53,7 @@ const calculate = ()=> {
             totalPerPerson.value = "No bill"
         }
         else { 
-            totalTipPerPerson.value = "no people"
+            totalTipPerPerson.value = "No people"
             totalPerPerson.value = "No people"
            
         }
