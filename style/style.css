@@ -138,7 +138,8 @@ html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .ti
 }
 
 html body main section form .maincolDiv .tipButtons .tipSecondContainer .col .customInputTip {
-  color: #5e7a7d;
+  text-align: right;
+  color: #00494d;
   background-color: #f4fafa;
 }
 

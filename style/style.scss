@@ -124,6 +124,7 @@ html {
                                 position: relative;
                                 input {
                                     position: relative;
+                                    
                                 }
                                 
                             }
@@ -157,7 +158,8 @@ html {
                                         }
                                     }
                                     .customInputTip {
-                                        color: $mid-dark-cyan;
+                                        text-align: right;
+                                        color: $very-dark-cyan;
                                         background-color: $input-cyan;
                                         &:hover { 
                                             background-color: $input-cyan;
@@ -175,6 +177,7 @@ html {
                         background-color: $very-dark-cyan;
                         border-radius: 1.5rem;
 
+
                         .indResutContainer {
                             .resultLabels {
                                 color: white;
@@ -188,7 +191,7 @@ html {
                                 background-color: transparent;
                                 color: $strong-cyan;
                                 border: none;
-
+                                
                                 @media screen and (min-width:992px) {
                                     &{
                                         font-size: 3.6rem;

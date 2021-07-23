@@ -65,6 +65,16 @@ const calculate = () => {
 
         totalTipPerPerson.value = `$${(totalTipPerPersonVar.toFixed(2))}`;
         totalPerPerson.value = `$${(totalPerPersonVar.toFixed(2))}`;
+
+        if(billAmountVar>=100000000) { 
+            totalTipPerPerson.style.fontSize="2.4rem";
+            totalPerPerson.style.fontSize="2.4rem";
+        }
+        else { 
+            totalTipPerPerson.style.fontSize="3.6rem";
+            totalPerPerson.style.fontSize="3.6rem";
+
+        }
   
 
 
